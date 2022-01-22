@@ -1,0 +1,1065 @@
+/*===========================================================================
+| Template Name: AWS Amazon Transcribe - Speech to Text Converter
+| Theme URL: https://codecanyon.net/user/berkinedesign
+| Author: BerkineDesign
+| Author URL: https://codecanyon.net/user/berkinedesign
+| Version: 1.0
+| File name: styles.css
+| Date Created: 25.12.2019
+| Website: www.berkinedesign.com
+============================================================================= */
+
+
+/* -------------------------------------------- */
+/*             TABLE OF CONTENTS
+/* -------------------------------------------- */
+/*   00 - Preload Styles			            */
+/*   01 - Global Styles				            */
+/*   02 - Instructions Layout		            */
+/*   03 - Time Counter Layout		            */
+/*   04 - Live Record Button Layout             */
+/*   05 - Textarea Layout 			            */
+/*   06 - Buttons Layout			            */
+/*   07 - Purchase Action Button & AWS Logo     */
+/*   08 - Audio File Upload Layout   		    */
+/*   09 - Recorded Audio File Upload Layout     */
+/*   10 - Copyright							    */
+
+
+
+/* ==========================================================================           
+ *
+ *    00 - PRELOAD STYLES
+ *
+ * ========================================================================== */
+
+.no-js #loader { display: none;  }
+
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+
+.se-pre-con {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 9999;
+			background: url(../img/preload.gif) center no-repeat #fff;
+} 
+
+
+
+/* ==========================================================================           
+ *
+ *    01 - GLOBAL STYLES
+ *
+ * ========================================================================== */
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-size: 12px;
+	color: #0E2E40;
+}
+
+section {
+	background: #F9F9F9;
+	padding-bottom: 64px;
+}
+
+section .container {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+h3 {
+	font-family: 'Poppins', sans-serif;
+	color: #0E2E40;
+	text-transform: uppercase;
+	margin-bottom: 4rem;
+	font-weight: 800;
+	font-size: 20px;
+	text-shadow: 0 1px 3px rgba(57,73,76,.2);
+}
+
+h6 {
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	color: #0E2E40;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+section {
+ background: top left url('../img/mb-bg-fb-04.jpg') no-repeat fixed;
+ background-size: cover;
+}
+
+section .form-title span {
+	color: #fff;
+}
+
+section .outer-wrapper {
+	background: #FFF;
+	border-top: 7px solid #0e2e40;
+	box-shadow: 0 3px 6px rgba(57,73,76,.5);
+	padding: 3rem 1.5rem 2rem;
+	width: 100%;
+	position: relative;
+}
+
+section .outer-wrapper h3 {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+section .outer-wrapper h3 span {
+	color: #FFC300;
+}
+
+/*------------------------------------------*/
+/*    Navigation
+/*------------------------------------------*/
+
+#top-nav {
+	background: #0e2e40;
+	box-shadow: 0 3px 6px rgba(57,73,76,.7);
+	margin-bottom: 64px;
+}
+
+#top-nav .container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.navbar {
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	line-height: 50px;
+	font-weight: 700;
+	z-index: 100;
+	-webkit-transition: all ease-in 0.2s;
+	transition: all ease-in 0.2s;
+}
+
+.navbar-nav {
+  	width: 100%;
+  	display: flex;
+  	font-size: 12px;
+  	justify-content: flex-end;
+}
+
+.navbar-nav li.nav-item a.nav-link {
+  	text-transform: uppercase;
+  	padding: 0px 15px;
+  	letter-spacing: 1px;
+  	color: #FFF;
+}
+
+.navbar-nav li.nav-item a.nav-link:hover {
+	color: #FFC300;
+}
+
+.navbar-brand {
+  	color: #FFF;
+  	font-size: 14px;
+  	text-transform: uppercase;
+  	font-weight: 800;
+}
+
+.navbar-brand span {
+  	color: #FFC300;
+}
+
+.navbar-brand:hover {
+	color: #FFF;
+}
+
+.dropdown-menu {
+	padding: 0;
+	margin-top: 5px;
+	font-size: 12px;
+	border-radius: 0;
+	background: #0e2e40;
+	box-shadow: 0px 4px 7px 1px rgba(20,20,20,.4);
+}
+
+.dropdown-item {
+	color: #FFF;
+	text-transform: uppercase;
+	font-weight: 700;
+	border-bottom: 1px solid #1c1c1a;
+}
+
+.dropdown-item:last-child {
+	border-bottom: none;
+}
+
+.dropdown-item:hover {
+	color: #0e2e40;
+	background-color: #FFC300;
+	transition: all .1s ease;
+}
+
+/* ==========================================================================           
+ *
+ *    02 - Instructions Layout
+ *
+ * ========================================================================== */
+
+#instructions {
+	margin-left: 2rem;
+	margin-right: 2rem;
+	margin-bottom: 3rem;
+	background-color: #F1FAFF;
+	border: 1px solid rgba(61, 154, 255, 0.6);
+	padding: 2rem;
+}
+
+#instructions h6 {
+	margin-bottom: 1rem;
+}
+
+#instructions i {
+	margin-right: 0.5rem;
+	font-size: 18px;
+	color: #42A5F6;
+}
+
+#instructions ul {
+	margin-bottom: 0;
+}
+
+#instructions ul li {
+	margin-bottom: 0.2rem;
+}
+
+#instructions span {
+	color: #42A5F6;
+}
+
+#instructions span.limitation {
+	color: #FF0000;
+	text-decoration: underline;
+}
+
+#warning {
+	margin-bottom: 1.5rem;
+}
+#warning span {
+	background: #F1FAFF;
+	padding: 0.5rem 1rem;
+	border: 1px solid rgba(61, 154, 255, 0.6);
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    03 - Time Counter Layout
+ *
+ * ========================================================================== */
+
+#clock-live {
+	transform: scale(0.6);
+}
+
+#clock-live .flip-clock-label {
+	display: none;
+}
+
+#clock-live .flip-clock-wrapper {
+	margin-top: 0;
+}
+
+#clock-live .flip-clock-wrapper ul li a div div.inn {
+	color: #FFF;
+	background-color: #0e2e40;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    04 - Live Record Button Layout
+ *
+ * ========================================================================== */
+
+#record-button-inner-wrapper {
+	display: inline-block;
+	padding: 2rem;
+	margin-bottom: 1.5rem;
+	border: 1px solid rgba(57,73,76,.2);
+	border-bottom: 4px solid #0e2e40;
+}
+
+#record-button-inner-wrapper h6 {
+	padding-bottom: .7rem;
+	margin-bottom: 2rem;
+	border-bottom: 1px solid rgba(57,73,76,.2);
+} 
+
+#record-button-inner-wrapper  img {
+	width: 120px;
+	height: 120px;
+}
+
+#record-button-inner-wrapper  button {
+	background: none;
+	border: none;
+	outline: none;
+}
+
+#record-button-inner-wrapper .awselect {
+	margin-bottom: 0;
+}
+
+#record-button-inner-wrapper .awselect .front_face > .bg {
+	background: #FFC300!important;
+}
+
+#record-button-inner-wrapper .awselect .front_face .current_value {
+	color: #0e2e40;
+}
+
+#record-button-inner-wrapper .awselect .back_face ul li a:hover {
+	color: #FFC300;
+}
+
+#record-button-outer-wrapper #error {
+	display: none;
+	margin-top: 1rem;
+	margin-bottom: 2.5rem;
+}
+
+#record-button-outer-wrapper #error span {
+	color: #FFF;
+	background: #dc3545;
+	padding: 1rem;
+
+}
+
+/* ==========================================================================           
+ *
+ *    05 - Textarea Layout
+ *
+ * ========================================================================== */
+
+.textarea-outer-wrapper {
+	padding: 1.5rem;
+	margin-bottom: 2rem;
+	border: 1px solid rgba(57,73,76,.2);
+}
+
+.textarea-outer-wrapper textarea.form-control {
+	border-radius: 0px;
+	padding-top: 15px;
+	font-size: 14px;
+}
+
+.textarea-box {
+	position: relative;
+}
+
+/* -------------------------------------------- */
+/* 		Textarea Label on Top
+/* -------------------------------------------- */
+
+.textarea-box .input-label {
+  	position: absolute;
+  	top: 0;
+  	padding-left: 5px;
+  	font-size: 14px;
+  	color: #0e2e40;
+  	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+  	user-select: none;
+}
+
+.textarea-box .input-label::after {
+  	content: '';
+  	position: absolute;
+  	-webkit-transform: translate3d(100%, 0, 0);
+  	transform: translate3d(100%, 0, 0);
+  	-webkit-transition: -webkit-transform 0.3s;
+  	transition: transform 0.3s;
+  	transition: opacity 0.2s ease;
+}
+
+.textarea-box .input-label-content {
+  	position: relative;
+  	padding: 0 4px;
+  	color: #0e2e40;
+  	background-color:#FFF;
+  	font-weight: 600;
+  	opacity: 0;
+  	display: inline-block;
+  	-webkit-transform-origin: 0 0;
+  	transform-origin: 0 0;
+  	-webkit-transform: translate3d(0, 20px, 0);
+  	transform: translate3d(0, 20px, 0);
+  	-webkit-transition: -webkit-transform 0.3s;
+  	transition: transform 0.2s;
+}
+
+.textarea-box .input-field:focus + .input-label .input-label-content {
+  	-webkit-transform: translate3d(15px, -10px, 0) scale3d(0.8, 0.8, 1);
+  	transform: translate3d(15px, -10px, 0) scale3d(0.8, 0.8, 1);
+	opacity: 1;
+}
+
+.form-control:disabled, .form-control[readonly] {
+	background-color: #fff;
+}
+
+/* -------------------------------------------- */
+/* 		Textarea Counter and Button
+/* -------------------------------------------- */
+
+.textarea-settings {
+	padding: 10px 0 14px;
+}
+
+.textarea-settings .character-counter {
+	
+}
+
+.textarea-settings .jQTAreaCount,
+.textarea-settings .jQTAreaValue {
+	font-style: normal;
+}
+
+.textarea-outer-wrapper .jQTAreaExt {
+	margin-bottom: 0;
+	height: 4px;
+	background-color: #0e2e40;
+}
+
+.textarea-settings .clear-button {
+	float: right;
+	font-size: 14px;
+}
+
+.textarea-settings .clear-button button {
+	font-family: 'Lato', sans-serif;
+	font-size: 12px;
+	color: #888;
+	font-weight: 600;
+	background: none;
+	border: none;
+	outline: none;
+  	text-decoration: none;
+}
+
+.textarea-settings .clear-button button:hover {
+	color: #0e2e40;
+}
+
+.textarea-settings .character-counter {
+	font-family: 'Lato', sans-serif;
+	font-style: normal;
+	font-size: 12px;
+	color: #888;
+	float: left;
+	margin-top: 3px;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    06 - Buttons Layout
+ *
+ * ========================================================================== */
+
+.action-buttons {
+	margin-top: 3rem;
+}
+
+.buttons-box button {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	color:#fff;
+	background-color: #0e2e40;
+	border: none;
+	outline: none;
+	text-transform: uppercase;
+	text-decoration: none;
+	width: 300px;
+	padding: 1rem;
+	margin-bottom: 2rem;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
+}
+
+.buttons-box button:hover{
+	background-color: #1f87e6;
+	-webkit-box-shadow: 0px 4px 7px -2px rgba(0,0,0,.5);
+	-moz-box-shadow: 0px 4px 7px -2px rgba(0,0,0,.5);
+	box-shadow: 0px 4px 7px -2px rgba(0,0,0,.5);
+}
+
+.buttons-box button i {
+	font-size: 14px;
+	margin-right: 7px;
+}
+
+.buttons-box .ripple {
+  	position:relative;
+  	overflow:hidden;
+  	-webkit-transition: all 0.2s ease;
+  	-moz-transition: all 0.2s ease;
+  	-o-transition: all 0.2s ease;
+  	transition: all 0.2s ease;
+}
+
+.buttons-box .ripple:hover {
+	cursor: pointer;
+}
+
+.buttons-box .ink {
+  	display: block;
+  	position: absolute;
+  	background:rgba(255, 255, 255, 0.3);
+  	border-radius: 100%;
+  	-webkit-transform:scale(0);
+     -moz-transform:scale(0);
+       -o-transform:scale(0);
+          transform:scale(0);
+}
+
+.buttons-box .animate {
+	-webkit-animation:ripple 0.65s linear;
+   	-moz-animation:ripple 0.65s linear;
+    -ms-animation:ripple 0.65s linear;
+     -o-animation:ripple 0.65s linear;
+        animation:ripple 0.65s linear;
+}
+
+@-webkit-keyframes ripple {
+    100% {opacity: 0; -webkit-transform: scale(2.5);}
+}
+@-moz-keyframes ripple {
+    100% {opacity: 0; -moz-transform: scale(2.5);}
+}
+@-o-keyframes ripple {
+    100% {opacity: 0; -o-transform: scale(2.5);}
+}
+@keyframes ripple {
+    100% {opacity: 0; transform: scale(2.5);}
+}
+
+.tooltip {
+	border-bottom: none!important;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    07 - Purchase Action Button & AWS Logo
+ *
+ * ========================================================================== */
+
+#purchase-button {
+	margin-left: 2rem;
+}
+
+#purchase-button a {
+	background: #DD2C00;
+	border: 1px solid #DD2C00;
+	padding: 15px 60px;
+	text-transform: uppercase;
+	color: #FFF;
+	outline: none;
+  	text-decoration: none;
+  	-webkit-box-shadow: 0px 4px 7px -2px rgba(0,0,0,.5);
+	-moz-box-shadow: 0px 4px 7px -2px rgba(0,0,0,.5);
+	box-shadow: 0px 4px 7px -2px rgba(0,0,0,.5);
+}
+
+#purchase-button a:hover {
+	background: #0E2E40;
+	border: 1px solid #DD2C00;
+	color: #DD2C00;
+	transition: all 0.2s ease;
+}
+
+/* -------------------------------------------- */
+/* 		AWS Logo
+/* -------------------------------------------- */
+
+#logo {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+#logo p {
+	font-family: 'Poppins', sans-serif;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: 800;
+	margin-bottom: 2px;
+}
+
+#logo img {
+	width: 80px;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    08 - Audio File Upload Layout
+ *
+ * ========================================================================== */
+
+/*------------------------------------------*/
+/*    General Layout
+/*------------------------------------------*/
+
+#existing-file-upload .col-md-5 {
+	padding-left: 2rem;
+	padding-right: 2rem;	
+	margin-left: 4rem;
+	margin-bottom: 3rem;
+}
+
+#existing-file-upload #file-upload-box {
+	padding: 3rem;
+	text-align: left;
+	border: 1px solid rgba(57,73,76,.2);
+}
+
+#existing-file-upload #file-upload-box h6 {
+	text-transform: uppercase;
+	padding-bottom: .7rem;
+	margin-bottom: 2rem;
+	border-bottom: 1px solid rgba(57,73,76,.2);
+	text-align: center;
+}
+
+#existing-file-upload #file-upload-box p {
+	margin-bottom: 8px;
+} 
+
+/*------------------------------------------*/
+/*    File Upload Button
+/*------------------------------------------*/
+
+.select-file {
+	margin-bottom: 1rem;
+	font-size: 12px;
+	overflow: hidden;
+}
+
+.select-file i {
+	margin-right: 0.5rem;
+}
+
+.select-file #file-selector {
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+	width: 1px;
+	height: 1px;
+}
+
+.select-file #file-selector + label {
+	padding: .9rem 4.5rem;
+	background-color: #FFC300;
+	color: #0E2E40;
+	cursor: pointer;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	box-shadow: 0 1px 3px 0 rgba(50, 50, 50, 0.2), 0 2px 1px -1px rgba(50, 50, 50, 0.12), 0 1px 1px 0 rgba(50, 50, 50, 0.14);
+}
+
+.select-file #file-selector:focus + label,
+.select-file #file-selector.has-focus + label,
+.select-file #file-selector + label:hover {
+    background-color: #DD2C00;
+    color: #FFF;
+    transition: all 0.2s ease;
+}
+
+/* -------------------------------------------- */
+/* 		Email Box
+/* -------------------------------------------- */
+
+#email {
+	margin-bottom: 1.7rem;
+}
+
+#email .form-control {
+	border-radius: 0px;
+	padding: 1.3rem 1.3rem;
+	font-size: 12px;
+}
+
+#email small, 
+#email .small {
+	color: #888;
+	opacity: 0.8;
+}
+
+/* -------------------------------------------- */
+/* 		Language Box
+/* -------------------------------------------- */
+
+#language p {
+	margin-bottom: 0.5rem;
+	font-size: 12px;
+}
+
+/* -------------------------------------------- */
+/* 		Awesome Select Dropdown
+/* -------------------------------------------- */
+
+.awselect {
+	text-align: left;
+	margin-bottom: 2rem;
+}
+
+.awselect .front_face {
+	padding: 0.9rem 1.5rem!important;
+}
+
+.awselect .front_face > .bg {
+	background: #42A5F6!important;
+	color: #FFF;
+	box-shadow: 0 1px 3px 0 rgba(50, 50, 50, 0.2), 0 2px 1px -1px rgba(50, 50, 50, 0.12), 0 1px 1px 0 rgba(50, 50, 50, 0.14);
+}
+
+.awselect .back_face {
+	padding: 0px!important;
+	float: left;
+}
+
+.awselect.animate2 > .bg {
+	-webkit-box-shadow: 0px 4px 7px -2px rgba(0,0,0,.5);
+-moz-box-shadow: 0px 4px 7px -2px rgba(0,0,0,.5);
+box-shadow: 0px 4px 7px -2px rgba(0,0,0,.5);
+}
+
+.awselect .back_face ul li a {
+	padding: 5px 25px!important;
+	float: left;
+}
+
+.awselect .back_face ul li a:hover {
+	background: #F7F7F7;
+	color: #00bcd4;
+}
+
+/*------------------------------------------*/
+/*    Convert Button
+/*------------------------------------------*/
+
+#upload-audio-file button {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	color:#fff;
+	background-color: #0e2e40;
+	border: none;
+	outline: none;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: .9rem 6.25rem;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
+}
+
+#upload-audio-file button:hover {
+	background-color: #1f87e6;
+}
+
+#upload-audio-file .ripple {
+  	position:relative;
+  	overflow:hidden;
+  	-webkit-transition: all 0.2s ease;
+  	-moz-transition: all 0.2s ease;
+  	-o-transition: all 0.2s ease;
+  	transition: all 0.2s ease;
+}
+
+#upload-audio-file .ripple:hover {
+	cursor: pointer;
+}
+
+#upload-audio-file .ink {
+  	display: block;
+  	position: absolute;
+  	background:rgba(255, 255, 255, 0.3);
+  	border-radius: 100%;
+  	-webkit-transform:scale(0);
+     -moz-transform:scale(0);
+       -o-transform:scale(0);
+          transform:scale(0);
+}
+
+#upload-audio-file .animate {
+	-webkit-animation:ripple 0.65s linear;
+   	-moz-animation:ripple 0.65s linear;
+    -ms-animation:ripple 0.65s linear;
+     -o-animation:ripple 0.65s linear;
+        animation:ripple 0.65s linear;
+}
+
+@-webkit-keyframes ripple {
+    100% {opacity: 0; -webkit-transform: scale(2.5);}
+}
+@-moz-keyframes ripple {
+    100% {opacity: 0; -moz-transform: scale(2.5);}
+}
+@-o-keyframes ripple {
+    100% {opacity: 0; -o-transform: scale(2.5);}
+}
+@keyframes ripple {
+    100% {opacity: 0; transform: scale(2.5);}
+}
+
+/*------------------------------------------*/
+/*    Status Message
+/*------------------------------------------*/
+
+ #file-upload-status-message {
+    margin-top: 1rem;
+ 	padding: 15px;
+    text-align: center;
+    display: none;
+    font-size: 10px;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 2px 1px -1px rgba(0, 0, 0, 0.3), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
+}
+ 
+.success-message {
+  color:#FFF;
+  background: #008c00;
+}
+
+.error-message {
+  color: #FFF;
+  background: #D13212;
+}
+
+.is-blocked {
+	cursor: not-allowed!important;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    09 - Recorded Audio File Upload
+ *
+ * ========================================================================== */
+/*------------------------------------------*/
+/*    Record Buttons Layout
+/*------------------------------------------*/
+
+#record-audio {
+	display: inline-flex;
+}
+
+#record-audio .controls {
+	padding: 0.8rem 1rem;
+	margin-bottom: 1.8rem;
+	margin-right: 5px;
+	width: 150px;
+	font-size: 12px;
+	color: #0e2e40;
+	position: relative;
+	background-color: #FFC300;
+}
+
+#record-audio .controls i {
+	margin-right: 7px;
+}
+
+#record-audio .controls:hover {
+	background-color: #DD2C00;
+	color: #FFF;
+	transition: ease 0.2s all;
+}
+
+.is-recording {
+	background-color: #DD2C00!important;
+	color: #FFF!important;
+}
+
+#audio-settings {
+	display: none;
+}
+
+#audio-settings-inner {
+	display: inline-flex;
+}
+
+#audio-format {
+	color: #888;
+	font-weight: 400;
+	margin-bottom: 8px;
+	margin-right: 1.5rem;
+}
+
+/*------------------------------------------*/
+/*    Timer
+/*------------------------------------------*/
+
+#audio-timer {
+	display: inline-flex;
+	font-size: 12px;
+	color: #888;
+	font-weight: 400;
+}
+
+#recordings {
+	display: none;
+	margin-bottom: 1.5rem;
+}
+
+/*------------------------------------------*/
+/*    General Layout
+/*------------------------------------------*/
+
+#existing-file-upload .col-md-5 {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+#existing-file-upload #recorder-upload-box {
+	padding: 3rem;
+	text-align: left;
+	border: 1px solid rgba(57,73,76,.2);
+}
+
+#existing-file-upload #recorder-upload-box h6 {
+	text-transform: uppercase;
+	padding-bottom: .7rem;
+	margin-bottom: 2rem;
+	border-bottom: 1px solid rgba(57,73,76,.2);
+	text-align: center;
+}
+
+#existing-file-upload #recorder-upload-box p {
+	margin-bottom: 8px;
+} 
+
+/*------------------------------------------*/
+/*    Convert Button
+/*------------------------------------------*/
+
+#recorder-upload-box button {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	color:#fff;
+	background-color: #0e2e40;
+	border: none;
+	outline: none;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: .9rem 5.25rem;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
+}
+
+#recorder-upload-box button:hover {
+	background-color: #1f87e6;
+}
+
+#recorder-upload-box .ripple {
+  	position:relative;
+  	overflow:hidden;
+  	-webkit-transition: all 0.2s ease;
+  	-moz-transition: all 0.2s ease;
+  	-o-transition: all 0.2s ease;
+  	transition: all 0.2s ease;
+}
+
+#recorder-upload-box .ripple:hover {
+	cursor: pointer;
+}
+
+#recorder-upload-box .ink {
+  	display: block;
+  	position: absolute;
+  	background:rgba(255, 255, 255, 0.3);
+  	border-radius: 100%;
+  	-webkit-transform:scale(0);
+     -moz-transform:scale(0);
+       -o-transform:scale(0);
+          transform:scale(0);
+}
+
+#recorder-upload-box.animate {
+	-webkit-animation:ripple 0.65s linear;
+   	-moz-animation:ripple 0.65s linear;
+    -ms-animation:ripple 0.65s linear;
+     -o-animation:ripple 0.65s linear;
+        animation:ripple 0.65s linear;
+}
+
+@-webkit-keyframes ripple {
+    100% {opacity: 0; -webkit-transform: scale(2.5);}
+}
+@-moz-keyframes ripple {
+    100% {opacity: 0; -moz-transform: scale(2.5);}
+}
+@-o-keyframes ripple {
+    100% {opacity: 0; -o-transform: scale(2.5);}
+}
+@keyframes ripple {
+    100% {opacity: 0; transform: scale(2.5);}
+}
+
+/*------------------------------------------*/
+/*    Status Message
+/*------------------------------------------*/
+
+ #file-record-status-message {
+    margin-top: 1rem;
+ 	padding: 15px;
+    text-align: center;
+    display: none;
+    font-size: 10px;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 2px 1px -1px rgba(0, 0, 0, 0.3), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
+}
+ 
+.success-message {
+  color:#FFF;
+  background: #008c00;
+}
+
+.error-message {
+  color: #FFF;
+  background: #D13212;
+}
+
+.is-blocked {
+	cursor: not-allowed!important;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    10 - Copyright
+ *
+ * ========================================================================== */
+
+#copyright {
+	margin-top: 1rem;
+}
+
+#copyright p {
+	color: #fff;
+	font-weight: 400;
+	margin-bottom: 0;
+	font-size: 10px;
+}

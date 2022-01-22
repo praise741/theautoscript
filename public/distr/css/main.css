@@ -1,0 +1,59 @@
+/*---------------------------------------- 
+==========================================
+
+  9.  Loading overlay
+
+==========================================
+/*----------------------------------------*/
+.loading-overlay {
+    background: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.spinner{
+    position: relative;
+    width: 100px;
+    height: 40px;
+    
+}
+
+.spinner span{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #ffb600;
+    opacity: .5;
+    animation: move 1.2s ease-in-out infinite;
+}
+
+.spinner span:nth-of-type(2) {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+    left: 20px;
+}
+.spinner span:nth-of-type(3) {
+    left: 40px;
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.6s;
+}
+.spinner span:nth-of-type(4) {
+    left: 60px;
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+}
+.spinner span:last-of-type {
+    left: 80px;
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+}
