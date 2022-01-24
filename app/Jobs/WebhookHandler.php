@@ -49,6 +49,7 @@ class WebhookHandler  extends ProcessWebhookJob implements ShouldQueue
         ];
 
        $data = json_decode($this -> webhookCall);
+       $apiURL = 'https://api.assemblyai.com/v2/transcript'.'/'.$data["transcript_id"];
        if ($data["status"] == "completed") {
         $response = Http::withHeaders($headers)->get($apiURL);
         dd($response);
