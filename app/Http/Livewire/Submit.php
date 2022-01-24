@@ -31,8 +31,8 @@ public $value;
     public $request;
     public function submit(){
 
+        $filename = $this-> audio-> store('file');
 
-$filename = $this -> audio  -> store('file', 'public');
 
 
 
