@@ -20,8 +20,8 @@
 
                 <!-- INCLUDE CSS FILES -->
 
-                <link rel="stylesheet" href="{{ asset('distr/css/bootstrap.min.css') }}">
-                <link rel="stylesheet" href="{{ asset('distr/css/intro.css') }}">
+                <link rel="stylesheet" href={{ asset('distr/css/bootstrap.min.css') }}>
+                <link rel="stylesheet" href={{ asset('distr/css/all.min.css') }}>
                 <!--<link rel="stylesheet" href="distr/css/main.css">-->
 
                 <!-- INCLUDE FONTS -->
