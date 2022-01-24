@@ -1,6 +1,18 @@
 <?php
 
 namespace App\Jobs;
+use Illuminate\Support\Facades\Storage;
+use File;
+use GuzzleHttp\Psr7;
+use GuzzleHttp\Promise;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Http\Request;
+use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Cache;
+use Livewire\Component;
+use Livewire\WithFileUploads;
 use Spatie\WebhookClient\ProcessWebhookJob;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
@@ -30,7 +42,20 @@ class WebhookHandler  extends ProcessWebhookJob implements ShouldQueue
      */
     public function handle()
     {
-        logger('this is dope');
-        logger($this -> webhookCall);
+        $ACCESS_TOKEN="dbd93045435d4484a6f21d533488555d";
+        $apiURL = 'https://api.assemblyai.com/v2/transcript';
+        $headers = [
+            'Authorization'=> $ACCESS_TOKEN,
+        ];
+
+       $data = json_decode($this -> webhookCall);
+       if ($data["status"] == "completed") {
+        $response = Http::withHeaders($headers)->get($apiURL);
+        dd($response);
+       }
+       else {
+           dd('error');
+       }
+
     }
 }

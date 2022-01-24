@@ -61,44 +61,7 @@ $filename = $this -> audio  -> store('file', 'public');
          $photo = fopen('storage/'.$filename, 'r');
 
          $response1 = Http::withHeaders($headers)-> attach( 'attachment', $photo, 'audio.m4a')->post($apiURL1);
-         $responseBody1 = json_decode($response1->getBody(), true);
 
-
-
-         $postInput = [
-            'audio_url' => $responseBody1['upload_url']
-         ];
-
-         $response = Http::withHeaders($headers)->post($apiURL, $postInput);
-
-         $statusCode = $response->status();
-         $responseBody = json_decode($response->getBody(), true);
-         $id= $responseBody["id"];
-         $status= $responseBody["status"];
-
-
-         while ($status == "processing"|| $status =="queued") {
-            $response2 =Http::withHeaders($headers)->get($apiURL.'/'.$id);
-            $responseBody2 = json_decode($response2->getBody(), true);
-            $id= $responseBody2["id"];
-            $status= $responseBody2["status"];
-            echo $status;
-
-            if ($status == "completed") {
-               $this -> result =  $responseBody2["text"];
-               $result = $responseBody2["text"];
-
-             Cache::put('value', $result);
-             break;
-
-
-
-
-
-
-            }
-
-        }
     }
 
     public function recieve()
