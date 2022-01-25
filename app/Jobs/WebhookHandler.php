@@ -48,15 +48,13 @@ class WebhookHandler  extends ProcessWebhookJob implements ShouldQueue
             'Authorization'=> $ACCESS_TOKEN,
         ];
 
-       $data = json_decode($this -> webhookCall);
-       $apiURL = 'https://api.assemblyai.com/v2/transcript'.'/'.$data["transcript_id"];
-       if ($data["status"] == "completed") {
+        $data = json_decode($this->webhookCall, true);
+       $apiURL = 'https://api.assemblyai.com/v2/transcript'.'/'. $data["transcript_id"];
+
+        http_response_code(200);
         $response = Http::withHeaders($headers)->get($apiURL);
+        return $response;
         dd($response);
-       }
-       else {
-           dd('error');
        }
 
     }
-}
