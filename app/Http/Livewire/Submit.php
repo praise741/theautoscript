@@ -37,7 +37,8 @@ public $value;
 
 
 
-         $ACCESS_TOKEN="dbd93045435d4484a6f21d533488555d"
+
+        $ACCESS_TOKEN="dbd93045435d4484a6f21d533488555d"
         ;
         // POST Data
          // URL
@@ -61,8 +62,23 @@ public $value;
          $photo = fopen('storage/'.$filename, 'r');
 
          $response1 = Http::withHeaders($headers)-> attach( 'attachment', $photo, 'audio.m4a')->post($apiURL1);
+         $responseBody1 = json_decode($response1->getBody(), true);
 
-    }
+
+
+         $postInput = [
+            'audio_url' => $responseBody1['upload_url'],
+            'webhook_url' => env("APP_URL")."/webhook?signing_secret='suckmydick'"
+         ];
+
+         $response = Http::withHeaders($headers)->post($apiURL, $postInput);
+
+         $statusCode = $response->status();
+         $responseBody = json_decode($response->getBody(), true);
+         $id= $responseBody["id"];
+         $status= $responseBody["status"];
+
+}
 
     public function recieve()
     {

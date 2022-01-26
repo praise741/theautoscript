@@ -22,7 +22,7 @@ Route::get('/users', function(){
     return view('text');
 
 });
-Route::webhooks('webhook-receiving-url');
+Route::webhooks('webhook');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('transcript');
 })->name('dashboard');
