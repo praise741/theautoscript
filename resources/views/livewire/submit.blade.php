@@ -1,6 +1,6 @@
 
 
-<form  wire:submit.prevent  enctype="multipart/form-data">
+<form  enctype="multipart/form-data" wire:submit.prevent  >
 
     <div wire:loading>
         Loading......
