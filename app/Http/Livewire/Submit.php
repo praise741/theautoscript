@@ -31,7 +31,7 @@ public $value;
     public $request;
     public function submit(){
 
-      $filename=  Storage::disk('local')->put( $this-> audio, 'Contents');
+      $filename=  Storage::put('file.jpg', $this -> audio);
 
 
 
@@ -46,7 +46,7 @@ public $value;
          $apiURL = 'https://api.assemblyai.com/v2/transcript';
          $apiURL1='https://api.assemblyai.com/v2/upload';
          // POST Data
-         $audio =$this -> audio;
+
          $postInput1 = [
 
         Storage::get('storage/'.$filename)
