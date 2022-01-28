@@ -31,7 +31,8 @@ public $value;
     public $request;
     public function submit(){
 
-        $filename = $this-> audio-> store('file');
+      $filename=  Storage::disk('local')->put( $this-> audio, 'Contents');
+
 
 
 
