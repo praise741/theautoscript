@@ -49,7 +49,7 @@ public $value;
 
          $postInput1 = [
 
-        Storage::get('storage/'.$filename)
+        Storage::get($filename)
          ];
 
 
