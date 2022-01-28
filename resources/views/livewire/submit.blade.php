@@ -1,6 +1,6 @@
 
 
-<form  wire:submit.prevent enctype="multipart/form-data">
+<form  wire:submit.prevent  enctype="multipart/form-data">
 
     <div wire:loading>
         Loading......
@@ -8,13 +8,7 @@
     <div wire:offline>
         You are now offline.....
     </div>
-    <div>
-        @if (session()->has('message'))
-            <div class="alert alert-success">
-                {{ session('message') }}
-            </div>
-        @endif
-    </div>
+
     <div class="mt-4">
         <textarea name="" id="" cols="40" rows="10">{{ $value }}</textarea>
 
@@ -31,12 +25,10 @@
     <div wire:loading wire:target="audio">Uploading...</div>
     <div class="mt-4">
         <x-jet-label for="password_confirmation" value="{{ __('Input audio file') }}" />
-        <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="file" wire:model="audio"   required autocomplete="new-password" />
+        <x-jet-input id="password_confirmation" class="block mt-1 w-full" id="upload{{ $iteration }}" type="file" wire:model="audio"   required autocomplete="new-password" />
 
     </div>
-    <div wire:model="result" class="mt-4">
-{{ $audio }}
-    </div>
+
 
 
     <div class="flex items-center justify-end mt-4">
