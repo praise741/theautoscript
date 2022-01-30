@@ -25,7 +25,7 @@
     <div wire:loading wire:target="audio">Uploading...</div>
     <div class="mt-4">
         <x-jet-label for="password_confirmation" value="{{ __('Input audio file') }}" />
-        <x-jet-input id="password_confirmation" class="block mt-1 w-full" id="upload{{ $iteration }}" type="file" wire:model="audio"   required autocomplete="new-password" />
+        <x-jet-input id="password_confirmation" class="block mt-1 w-full"  type="file" wire:model="audio"   required autocomplete="new-password" />
 
     </div>
 

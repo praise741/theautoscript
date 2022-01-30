@@ -38,8 +38,6 @@ public $value;
         $filename = $this-> audio-> store('file');
 
 
-        $this->attachment=null;
-        $this->iteration++;
 
 
 
