@@ -15,7 +15,8 @@
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.8",
         "rinvex/laravel-subscriptions": "^5.0",
-        "spatie/laravel-webhook-client": "^2.7"
+        "spatie/laravel-webhook-client": "^2.7",
+        "unicodeveloper/laravel-paystack": "^1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

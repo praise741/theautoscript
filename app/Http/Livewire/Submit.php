@@ -32,7 +32,7 @@ public $value;
     public function submit(){
         $audio =$this -> audio;
         $this->validate($audio, [
-            'file' => 'required|file'
+            
          ]);
 
         $filename = $this-> audio-> store('file');
