@@ -24,18 +24,10 @@ class Submit extends Component
     use WithFileUploads;
     public $audio;
 
-public $value;
-    public $url;
-    public $ids;
-    public $status;
-    public $request;
-    protected $rules = [
-        'audio' => 'required',
 
 
-    ];
     public function submit(){
-        $this->validate();
+
         $audio =$this -> audio;
 
 
