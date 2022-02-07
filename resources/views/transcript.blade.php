@@ -5,7 +5,8 @@
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
-@livewire("submit")
+
+  @livewire("submit")
 
     </x-jet-authentication-card>
     @livewireScripts()

@@ -43,6 +43,7 @@ class WebhookHandler  extends ProcessWebhookJob implements ShouldQueue
     public function handle()
     {
         $result= $this -> webhookCall;
+        
 
         $ACCESS_TOKEN="dbd93045435d4484a6f21d533488555d";
         $apiURL = 'https://api.assemblyai.com/v2/transcript';
