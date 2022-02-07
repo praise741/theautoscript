@@ -31,7 +31,8 @@ public $value;
     public $request;
     protected $rules = [
         'audio' => 'required',
-        'email' => 'required|email',
+
+
     ];
     public function submit(){
         $this->validate();
@@ -78,12 +79,8 @@ public $value;
             'webhook_url' => env("APP_URL")."/webhook?signing_secret='suckmydick'"
          ];
 
-         $response = Http::withHeaders($headers)->post($apiURL, $postInput);
 
-         $statusCode = $response->status();
-         $responseBody = json_decode($response->getBody(), true);
-         $id= $responseBody["id"];
-         $status= $responseBody["status"];
+
 
 }
 
