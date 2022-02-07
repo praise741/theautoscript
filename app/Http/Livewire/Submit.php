@@ -34,6 +34,7 @@ public $value;
         'email' => 'required|email',
     ];
     public function submit(){
+        $this->validate();
         $audio =$this -> audio;
 
 
