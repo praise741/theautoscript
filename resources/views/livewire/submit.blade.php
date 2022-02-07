@@ -39,6 +39,7 @@
 
 <x-jet-button wire:click="recieve">recieve past jobs</x-jet-button>
     </div>
+    <X-jet-text>Developed with love by dotmart codes</X-jet-text>
 
 </form>
 
