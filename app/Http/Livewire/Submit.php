@@ -29,11 +29,13 @@ public $value;
     public $ids;
     public $status;
     public $request;
+    protected $rules = [
+        'audio' => 'required',
+        'email' => 'required|email',
+    ];
     public function submit(){
         $audio =$this -> audio;
-        $this->validate($audio, [
-            'audio' => 'required'
-         ]);
+
 
         $filename = $this-> audio-> store('file');
 
