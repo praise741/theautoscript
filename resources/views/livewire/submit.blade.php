@@ -30,11 +30,11 @@
     x-on:livewire-upload-progress="progress = $event.detail.progress"
 >
 <div x-show="isUploading">
-    <progress max="100" x-bind:value="progress" class="p-5 w-1/2"></progress>
+    <progress max="100" x-bind:value="progress" class="p-5 w-1/2 bg-slate-900 "></progress>
 </div>
     <div class="mt-4">
-        <x-jet-label for="password_confirmation" value="{{ __('Input audio file') }}" />
-        <x-jet-input id="password_confirmation" class="block mt-1 w-full" accept="audio/*" type="file" wire:model="audio"   required autocomplete="new-password" />
+        <x-jet-label for="audio" value="{{ __('Input audio file') }}" />
+        <x-jet-input id="audio" class="block mt-1 w-full" accept="audio/*" type="file" wire:model="audio"   required  />
         @error('audio') <span class="error">{{ $message }}</span> @enderror
     </div>
 
