@@ -23,6 +23,7 @@ class Submit extends Component
 
     use WithFileUploads;
     public $audio;
+    public $value;
 
 
 
