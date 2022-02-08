@@ -77,10 +77,7 @@ class Submit extends Component
 
 }
 
-    public function recieve()
-    {
-        $this -> value = Cache::get('value');
-    }
+
 
 
 

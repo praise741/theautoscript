@@ -58,7 +58,9 @@ class WebhookHandler  extends ProcessWebhookJob implements ShouldQueue
 
 
         $response = Http::withHeaders($headers)->get($apiURL);
-        return $response;
+        $response = $result;
+
+        return $result;
         dd($response);
        }
 
