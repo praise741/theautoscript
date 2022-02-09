@@ -30,9 +30,9 @@ class Submit extends Component
     public function submit(){
 
 
+           $audio =$this -> audio;
 
-
-         $filename = $this-> audio-> store('file','public');
+         $filename =  $audio-> store('file','public');
 
 
 
