@@ -21,6 +21,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
+
 class WebhookHandler  extends ProcessWebhookJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
@@ -58,7 +59,8 @@ class WebhookHandler  extends ProcessWebhookJob implements ShouldQueue
 
 
         $response = Http::withHeaders($headers)->get($apiURL);
-        $response = $result;
+        return    $response = $result;
+        Cache::put('value', $result);
 
         return $result;
         dd($response);
