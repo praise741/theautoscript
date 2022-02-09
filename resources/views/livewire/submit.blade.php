@@ -34,7 +34,7 @@
 </div>
     <div class="mt-4">
         <x-jet-label for="audio" value="{{ __('Input audio file') }}" />
-        <x-jet-input id="audio" class="block mt-1 w-full" accept="audio/*" type="file" wire:model="audio"   required  />
+        <input id="audio" class="block mt-1 w-full" accept="audio/*" type="file" wire:model="audio"   required  />
 {{ $audio }}
     </div>
 
