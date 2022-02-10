@@ -69,7 +69,7 @@ class Submit extends Component
 
          $postInput = [
             'audio_url' => $responseBody1['upload_url'],
-            'webhook_url' => env("APP_URL")."/webhook?signing_secret='suckmydick'"
+            'webhook_url' => env("APP_URL")."/webhook?hashster='suckmydick'"
          ];
 
 

@@ -53,7 +53,7 @@ class WebhookHandler  extends ProcessWebhookJob implements ShouldQueue
         ];
 
         $data= json_decode($this -> webhookCall);
-        http_response_code(200);
+           http_response_code(200);
        $apiURL = 'https://api.assemblyai.com/v2/transcript'.'/'. $data["transcript_id"];
 
 
