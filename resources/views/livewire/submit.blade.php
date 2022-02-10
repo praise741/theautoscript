@@ -30,7 +30,7 @@
     x-on:livewire-upload-progress="progress = $event.detail.progress"
 >
 <div x-show="isUploading">
-    <progress max="100" x-bind:value="progress" class="p-5  w-full my-10 bg-blue-600"></progress>
+    <progress max="100" x-bind:value="progress" class="p-5  w-full my-7 bg-blue-600"></progress>
 </div>
     <div class="mt-4">
         <x-jet-label for="audio" value="{{ __('Input audio file') }}" />
