@@ -33,10 +33,6 @@ class Submit extends Component
            $audio =$this -> audio;
 
          $filename =  $audio-> store('file','public');
-         if ($filename == "") {
-             dd('$file is empty');
-         }
-
 
 
 
