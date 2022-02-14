@@ -32,7 +32,7 @@ class Submit extends Component
 
            $audio =$this -> audio;
 
-         $filename =  $audio-> store('file','public');
+    $filename = $audio -> store ("audio");
 
 
 
