@@ -22,19 +22,10 @@
         <x-jet-label for="email" value="{{ __('email') }}" />
         <x-jet-input id="email"  class="block mt-1 w-full" type="email"   name="email" required autocomplete="new-password" />
     </div>
-    <div
-    x-data="{ isUploading: false, progress: 0 }"
-    x-on:livewire-upload-start="isUploading = true"
-    x-on:livewire-upload-finish="isUploading = false"
-    x-on:livewire-upload-error="isUploading = false"
-    x-on:livewire-upload-progress="progress = $event.detail.progress"
->
-<div x-show="isUploading">
-    <progress max="100" x-bind:value="progress" class="p-5  w-full my-7 bg-blue-600"></progress>
-</div>
+
     <div class="mt-4">
         <x-jet-label for="audio" value="{{ __('Input audio file') }}" />
-        <input id="audio" class="block mt-1 w-full" accept="audio/*" type="file" wire:model="audio"   required  />
+        <input id="audio" class="block mt-1 w-full"  type="file" wire:model="audio"   required  />
 {{ $audio }}
     </div>
 
